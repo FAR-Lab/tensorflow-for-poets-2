@@ -18,3 +18,14 @@ This repo contains simplified and trimmed down version of tensorflow's example i
 
 The `scripts` directory contains helpers for the codelab. Some of these come from the main TensorFlow repository, and are included here so you can use them without also downloading the main TensorFlow repo (they are not part of the TensorFlow `pip` installation).
 
+## Why this fork
+
+This forked version includes a validation script that uses tf new `tf.data` API to "pipe" the validation data in. Alot of variables need to be set by hand like the output value as well as the header should the application change.
+
+A few hints to get you along the way on changing this script
+
+a typical comand line would look like this:
+``python counterTestV4.py ~/Desktop/LAMWITTY_FACES/VALIDATION/Y output_y``
+in  this case the first argument after the script is the folder with all y labled elements. `output_y`  is the csv file outpuit name.
+
+One other aspect is the header variable in the script `headers =['clip','frame','n','o','y','p']`  on line 135. That needs to be matched with the data storage scripts in lines 85 to 113.
