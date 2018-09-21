@@ -25,7 +25,7 @@ This forked version includes a validation script that uses tf new `tf.data` API 
 A few hints to get you along the way on changing this script
 
 a typical comand line would look like this:
-``python counterTestV4.py ~/Desktop/LAMWITTY_FACES/VALIDATION/Y output_y``
+``python FolderBasedValidation.py ~/Desktop/LAMWITTY_FACES/VALIDATION/Y output_y``
 in  this case the first argument after the script is the folder with all y labled elements. `output_y`  is the csv file outpuit name.
 
 One other aspect is the header variable in the script `headers =['clip','frame','n','o','y','p']`  on line 135. That needs to be matched with the data storage scripts in lines 85 to 113.
